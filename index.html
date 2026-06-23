@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pepper Atlas: um atlas sensorial das pimentas do Brasil e do mundo.">
+  <title>Pepper Atlas | Da delicadeza ao fogo extremo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="identity" href="#inicio" aria-label="Pepper Atlas, início">
+      <span class="monogram">PA</span>
+      <span><strong>Pepper Atlas</strong><small>Da delicadeza ao fogo extremo</small></span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="#inicio">Início</a>
+      <a href="#pimentas">Pimentas</a>
+      <a href="#scoville">Escala Scoville</a>
+      <a href="#brasileiras">Brasileiras</a>
+      <a href="#harmonizacoes">Harmonizações</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+
+    <div class="header-tools">
+      <button class="icon-button" id="searchButton" aria-label="Buscar pimenta" title="Buscar">⌕</button>
+      <button class="icon-button menu-button" id="menuButton" aria-label="Abrir menu" aria-expanded="false" title="Menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy reveal">
+        <div class="chapter"><b>01</b><i></i><i></i><i></i></div>
+        <p class="kicker">Atlas sensorial · Brasil e o mundo</p>
+        <h1>PEPPER<br><em>ATLAS</em></h1>
+        <p class="hero-tagline">Da delicadeza ao fogo extremo.</p>
+        <p class="hero-description">Explore as pimentas mais famosas, saborosas e intensas do Brasil e do mundo em uma jornada por ardência, aroma, origem e gastronomia.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#pimentas">Explorar pimentas <span>→</span></a>
+          <a class="button button-ghost" href="#scoville">Ver escala Scoville <span>↓</span></a>
+        </div>
+        <div class="hero-stats">
+          <span><b>24</b> variedades</span>
+          <span><b>BR</b> Brasil e o mundo</span>
+          <span><b>0</b> a 3.000.000+ SHU</span>
+        </div>
+      </div>
+
+      <div class="hero-image reveal">
+        <img src="images/hero-pimentas-premium.png" alt="Seleção de pimentas sob iluminação gastronômica dramática">
+        <button class="play-seal" id="journeyButton" aria-label="Descubra o sabor do fogo"><i>▶</i><span>Descubra o sabor do fogo</span></button>
+        <small>Fotografia editorial · Capsicum</small>
+      </div>
+    </section>
+
+    <section class="fire-journey reveal">
+      <img src="images/Pepper X.jpg" alt="Pimenta em fotografia macro">
+      <div>
+        <p class="kicker">Manifesto Pepper Atlas</p>
+        <h2>A jornada do fogo</h2>
+        <p>Pimenta não é apenas ardência. É fruta, fumaça, perfume, acidez, doçura, cultura e memória gastronômica. Algumas são delicadas e quase doces. Outras desafiam os limites do paladar humano. Todas contam uma história.</p>
+      </div>
+      <div class="botanical" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    </section>
+
+    <section class="scoville section" id="scoville">
+      <div class="section-title reveal">
+        <div><p class="kicker">Termômetro sensorial</p><h2>Escala <em>Scoville</em></h2></div>
+        <p>A unidade SHU estima a concentração de capsaicina, responsável pela sensação de calor. Cultivo e maturação podem alterar os valores.</p>
+      </div>
+      <div class="scale reveal">
+        <button data-heat="Suave"><i></i><strong>Suave</strong><small>0 – 1.000 SHU</small></button>
+        <button data-heat="Leve"><i></i><strong>Leve</strong><small>1.000 – 10.000</small></button>
+        <button data-heat="Média"><i></i><strong>Média</strong><small>10.000 – 50.000</small></button>
+        <button data-heat="Forte"><i></i><strong>Forte</strong><small>50.000 – 350.000</small></button>
+        <button data-heat="Extrema"><i></i><strong>Extrema</strong><small>350.000 – 3.000.000+</small></button>
+      </div>
+    </section>
+
+    <section class="collection section" id="pimentas">
+      <div class="section-title reveal">
+        <div><p class="kicker">24 retratos de sabor</p><h2>Cartografia da <em>ardência</em></h2></div>
+        <p>As brasileiras abrem a coleção. Depois, o atlas atravessa México, Caribe, Ásia, Europa e as fronteiras do calor extremo.</p>
+      </div>
+      <div class="filter-bar reveal">
+        <div class="heat-tabs" id="heatTabs">
+          <button class="active" data-filter-heat="Todas">Todas</button>
+          <button data-filter-heat="Suave">Suaves</button>
+          <button data-filter-heat="Média">Médias</button>
+          <button data-filter-heat="Forte">Fortes</button>
+          <button data-filter-heat="Extrema">Extremas</button>
+        </div>
+        <label>Origem<select id="originFilter"><option value="">Todas</option><option>Brasil</option><option>México</option><option>Caribe</option><option>Ásia</option><option>Europa</option><option>EUA</option><option>Índia</option><option>França</option></select></label>
+        <label>Sabor<select id="flavorFilter"><option value="">Todos</option><option>Frutada</option><option>Defumada</option><option>Floral</option><option>Terrosa</option><option>Cítrica</option><option>Vegetal</option><option>Doce</option><option>Aromática</option></select></label>
+        <label>Uso<select id="useFilter"><option value="">Todos</option><option>Conservas</option><option>Molhos</option><option>Carnes</option><option>Frutos do mar</option><option>Drinks</option><option>Defumados</option><option>Pratos extremos</option></select></label>
+        <button class="clear-button" id="clearFilters">Limpar filtros</button>
+      </div>
+      <div class="collection-meta"><span id="resultsCount">24 pimentas no atlas</span><span>Seleção editorial · toque nos cards para descobrir</span></div>
+      <div class="pepper-grid" id="pepperGrid"></div>
+      <div class="empty-state" id="emptyState"><b>Nenhuma pimenta encontrada.</b><span>Experimente combinar outros filtros.</span></div>
+    </section>
+
+    <section class="brazil section" id="brasileiras">
+      <div class="brazil-intro reveal">
+        <p class="kicker">Território em destaque</p>
+        <h2>Sabores do <em>Brasil</em></h2>
+        <p>Da Amazônia ao Cerrado, o Brasil revela pimentas de perfume intenso, beleza vibrante e personalidade única. Biquinho, Murupi, Cumari-do-Pará, Malagueta e Pimenta-de-Cheiro mostram que o fogo brasileiro não está apenas na ardência, mas na cultura, no aroma e na memória da cozinha.</p>
+      </div>
+      <div class="brazil-grid reveal" id="brazilGrid"></div>
+    </section>
+
+    <section class="curation section" id="harmonizacoes">
+      <div class="section-title reveal">
+        <div><p class="kicker">Curadoria sensorial</p><h2>Saborosas × <em>perigosas</em></h2></div>
+        <p>Quatro caminhos para encontrar a pimenta que conversa com o seu paladar e com a sua cozinha.</p>
+      </div>
+      <div class="curation-grid reveal">
+        <article><span>01</span><h3>As mais delicadas</h3><p>Biquinho, Cambuci, Shishito e Poblano.</p><small>Doçura, frescor e calor quase imperceptível.</small></article>
+        <article><span>02</span><h3>As mais gastronômicas</h3><p>Dedo-de-Moça, Jalapeño, Chipotle, Habanero e Espelette.</p><small>Camadas aromáticas para pratos completos.</small></article>
+        <article><span>03</span><h3>As mais aromáticas</h3><p>Pimenta-de-Cheiro, Murupi, Cumari-do-Pará e Scotch Bonnet.</p><small>Perfume intenso antes mesmo da primeira mordida.</small></article>
+        <article><span>04</span><h3>As mais extremas</h3><p>Ghost Pepper, Carolina Reaper e Pepper X.</p><small>Uso mínimo, técnica e respeito absoluto.</small></article>
+      </div>
+    </section>
+  </main>
+
+  <footer id="sobre">
+    <div class="footer-brand"><span class="monogram">PA</span><div><h2>Pepper Atlas</h2><p>Um atlas sensorial das pimentas do Brasil e do mundo.</p></div></div>
+    <nav><a href="#inicio">Início</a><a href="#pimentas">Pimentas</a><a href="#scoville">Escala Scoville</a><a href="#brasileiras">Brasileiras</a><a href="#harmonizacoes">Harmonizações</a></nav>
+    <div class="footer-note"><p>Criado para explorar sabor, cultura, ardência e gastronomia.</p><small>© 2026 Pepper Atlas</small></div>
+  </footer>
+
+  <dialog id="pepperModal"><button class="modal-close" id="modalClose" aria-label="Fechar">×</button><div id="modalContent"></div></dialog>
+  <div class="search-overlay" id="searchOverlay"><button id="searchClose" aria-label="Fechar busca">×</button><label>Encontre uma pimenta<input id="searchInput" type="search" placeholder="Ex.: Murupi, México, defumada..."></label><p>Digite um nome, origem ou perfil de sabor.</p></div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
